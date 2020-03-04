@@ -1,5 +1,4 @@
-import Huesped from "./Huesped.js"
-class Reservacion{
+export default class Reservacion{
      /**
       * 
       * @param {numer} numH numero de habitación 
@@ -14,11 +13,8 @@ class Reservacion{
     getFechaFormatoCorto(){
         return`Fecha de llegada: ${this.fechalle.getDate()}/${this.fechalle.getMonth()}/${this.fechalle.getFullYear()}`
     }
-    addHuesped(){
-      let H1 = new Huesped('Juanito Perez Gonzales', 'masculino')
+    addHuesped(H1){
       this.huespedes.push(H1)
-      let H2 = new Huesped('Juanita Piña Gallardo', 'masculino')
-      this.huespedes.push(H2)
       
       return `RESERVADOS`
     }
@@ -34,9 +30,3 @@ class Reservacion{
     }
 
 }
-/*let app = new Reservacion(4,12)
-console.log(app.getFechaFormatoCorto())
-console.log(app.addHuesped())
-console.log(app.getNumHuespedes())
-console.log(app.print())
-*/
