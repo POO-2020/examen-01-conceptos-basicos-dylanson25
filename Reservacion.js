@@ -1,4 +1,3 @@
-let cont = 0
 export default class Reservacion{
      /**
       * 
@@ -17,14 +16,11 @@ export default class Reservacion{
     }
     addHuesped(H1){
       this.huespedes.push(H1)
-      
-      return `RESERVADOS`
     }
     getNumHuespedes(){
       return `los huespedes registrados para la reservación son ${this.huespedes.length}`  
     }
     print(){
-        cont = cont = this.huespedes.lenght
         console.log(`- Habitacion: ${this.numH} \n- ${this.getFechaFormatoCorto()}\n- ${this.noches} Noches reservadas`)
         this.huespedes.forEach((hues, i) => {
         console.log(`- ${this.huespedes[i].getDescricionH()}`)
